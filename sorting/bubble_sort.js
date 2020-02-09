@@ -35,11 +35,11 @@ function test(param, expected) {
     console.log('✔ Sorting function works as expected');
   } else {
     const error =  new Error(
-    `❌ Sorting function is not working correctly. \n Expected ${expected} but got ${result}`);
+    `❌  Sorting function is not working correctly. \n Expected ${expected} but got ${result}`);
     console.log(error.message);
   }
 }
 
 // test([5,3,10,6, 77, 13, -2, 25, 31, 44, 0], [-2, 0, 3, 5, 6, 10, 13, 25, 31, 44, 77]);
 
-// test([3,1,6,10,5,9,2,8,4,7], [1,6,3]);
+// test([3,1,6,10,5,9,2,8,4,7], [1,2,3,4,5,6,7,8,9,10]);
