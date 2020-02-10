@@ -30,6 +30,11 @@ function showState(nums) {
     div.appendChild(span);
   }
 
+  timesCalled ++;
+  // document.querySelector('#called').innerHTML = `Times Called ${timesCalled}`;
+  setTimeout(() => {
+    document.querySelector('#called').innerHTML = `Times Called ${timesCalled}`}
+  , 0);
   document.querySelector('#display').appendChild (div)
 
 }
@@ -50,10 +55,11 @@ function showSimulatedState(nums) {
     div.appendChild(span);
   }
 
-  const timeOut = timesCalled * 2300;
+  const timeOut = (timesCalled * 300) + 1000;
   timesCalled ++;
 
   setTimeout(() => {
+    document.querySelector('#called').innerHTML = `Times Called ${timesCalled}`
     const display = document.querySelector('#display');
     if( display.lastElementChild) display.removeChild(display.lastElementChild);
     document.querySelector('#display').append/* Child */(div)
